@@ -10,10 +10,10 @@
 Update-Database
 ```
 
-###TaskList 
+## TaskList 
 
 Порядок разработки можно посмотреть по списку задач
 
-#### Test2
+## Test2
 
 В файле /Test2/Petrenko.sql решение на второе задание 
