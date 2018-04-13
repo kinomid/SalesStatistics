@@ -1,4 +1,4 @@
-﻿// TODO:7 добавляем DataContext для View и создаем интерфейс
+﻿// TODO:7 добавляем DataContext для View и создаем UI
 using System.Windows;
 
 namespace SalesStatistics {
