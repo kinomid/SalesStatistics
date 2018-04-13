@@ -9,3 +9,7 @@
 ```
 Update-Database
 ```
+
+## Test2
+
+В файле /Test2/Petrenko.sql решение на второе задание 
