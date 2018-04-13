@@ -5,8 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SalesStatistics"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="455.587" Width="734.218" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel>
+            <StackPanel>
+                <Label Content="Тип 1"/>
+                <CheckBox Content="Анализировать"
+                          IsChecked="{Binding Type1Checked}"/>
+                <ComboBox IsEnabled="{Binding Type1Checked}"
+                          IsEditable="False"
+                          ItemsSource="{Binding Type1_Classifiers}" DisplayMemberPath="ClassifierName"
+                          SelectedItem="{Binding SelectedType1_Classifier}"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Тип 2"/>
+                <CheckBox Content="Анализировать"
+                          IsChecked="{Binding Type2Checked}"/>
+                <ComboBox IsEnabled="{Binding Type2Checked}"
+                          IsEditable="False"
+                          ItemsSource="{Binding Type2_Classifiers}" DisplayMemberPath="ClassifierName"
+                          SelectedItem="{Binding SelectedType2_Classifier}"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Тип 3"/>
+                <CheckBox Content="Анализировать"
+                          IsChecked="{Binding Type3Checked}"/>
+                <ComboBox IsEnabled="{Binding Type3Checked}"
+                          IsEditable="False"
+                          ItemsSource="{Binding Type3_Classifiers}" DisplayMemberPath="ClassifierName"
+                          SelectedItem="{Binding SelectedType3_Classifier}"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Type4"/>
+                <CheckBox Content="Анализировать"
+                          IsChecked="{Binding Type4Checked}"/>
+                <ComboBox IsEnabled="{Binding Type4Checked}"
+                          IsEditable="False"
+                          ItemsSource="{Binding Type4_Classifiers}" DisplayMemberPath="ClassifierName"
+                          SelectedItem="{Binding SelectedType4_Classifier}"/>
+            </StackPanel>
+            <Button Content="Выбрать данные"
+                    Command="{Binding GetDataCommand}"/>
+            <StackPanel>
+                <Label Content="Тип анализа"/>
+                <ComboBox IsEditable="False"
+                          ItemsSource="{Binding Analytics }" SelectedValuePath="Value" DisplayMemberPath="Key"
+                          SelectedItem="{Binding SelectedAnalytic}"/>
+                <Button Content="Анализировать"
+                        Command="{Binding GetAnalysisCommand }"/>
+            </StackPanel>
+        </WrapPanel>
+
+        <DataGrid Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding SalesStatistics}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата"
+                                    Binding="{Binding ShipDate, StringFormat='dd.MM.yyyy'}"/>
+                <DataGridTextColumn Header="Тип1"
+                                    Binding="{Binding Type1_Classiifer.ClassifierName}"/>
+                <DataGridTextColumn Header="Тип2"
+                                    Binding="{Binding Type2_Classiifer.ClassifierName}"/>
+                <DataGridTextColumn Header="Тип3"
+                                    Binding="{Binding Type3_Classiifer.ClassifierName}"/>
+                <DataGridTextColumn Header="Тип4"
+                                    Binding="{Binding Type4_Classiifer.ClassifierName}"/>
+                <DataGridTextColumn Header="Объем"
+                                    Binding="{Binding Amount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
