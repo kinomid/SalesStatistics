@@ -1,3 +1,4 @@
+// TODO:5 файл создается с помощью миграции, реализуем метод Seed для наполнения БД тестовыми данными (Update-Database )
 namespace SalesStatistics.Migrations {
     using Data;
     using Models;

@@ -1,4 +1,6 @@
-﻿using SalesStatistics.Models;
+﻿// TODO:4 Добавляем модель SalesStatisticsContext и описываем конфигурацию императивно в коде и создаем миграцию ( Enable-Migrations, Add-Migration)
+
+using SalesStatistics.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

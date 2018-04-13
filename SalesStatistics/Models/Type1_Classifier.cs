@@ -1,4 +1,5 @@
-﻿using System;
+﻿//TODO:2 модель TypeN_Classifier.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

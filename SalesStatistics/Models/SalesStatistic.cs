@@ -1,10 +1,12 @@
-﻿using System;
+﻿// TODO:3 Добавляем модель SalesStatistic
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SalesStatistics.Models {
+
     class SalesStatistic {
         public DateTime ShipDate { get; set; }
         public decimal Amount { get; set; }

@@ -1,4 +1,5 @@
-﻿using SalesStatistics.Data;
+﻿// TODO:6 создаем ViewModel, добавляем INotifyPropertyChanged, RelayCommand (для реализации MVVM, без сторонних фраемворков), свойства и команды для байдинга во View
+using SalesStatistics.Data;
 using SalesStatistics.Models;
 using System;
 using System.Collections.Generic;
